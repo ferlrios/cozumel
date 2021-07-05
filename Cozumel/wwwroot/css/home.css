@@ -1,0 +1,61 @@
+﻿body {
+  background-color: rgb(8, 0, 31);
+  color: whitesmoke;
+}
+
+.navegation-bar {
+  background-color: black;
+  color: white;
+}
+
+.brand {
+  color: white;
+  font-weight: 500;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 12vw);
+  grid-template-rows: repeat(2, 12em);
+  gap: 1em;
+}
+
+.grit-item {
+  box-shadow: 0 0 70px 10px rgba(226, 230, 0, 0.1);
+}
+.grid-item:nth-child(odd) {
+  background-color: rgb(129, 29, 29);
+}
+.grid-item:nth-child(even) {
+  background-color: rgb(97, 41, 41);
+}
+
+.day {
+  padding: 0.4em 0.4em;
+  font-size: 1em;
+  color: whitesmoke;
+  float: inline-start;
+}
+.number {
+  padding: 0.1em;
+  padding-right: 0.25em;
+  float: inline-end;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+
+.nav-bar-item {
+  color: white;
+  font-weight: 500;
+}
+
+/* .................. */
+
+.nav-links {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
