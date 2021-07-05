@@ -20,14 +20,14 @@ namespace Cozumel.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<MyUser> _signInManager;
+        private readonly UserManager<MyUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<MyUser> userManager,
+            SignInManager<MyUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -99,7 +99,7 @@ namespace Cozumel.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new MyUser { UserName = Input.Username, Email = Input.Email, Description = Input.Description, InstagramURL = Input.InstagramURL, SpotifyURL= Input.SpotifyURL, YoutubeURL=Input.YoutubeURL } };
+                var user = new MyUser { UserName = Input.Username, Email = Input.Email, Description = Input.Description, InstagramURL = Input.InstagramURL, SpotifyURL= Input.SpotifyURL, YoutubeURL=Input.YoutubeURL } ;
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

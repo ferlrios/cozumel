@@ -20,6 +20,11 @@
   gap: 1em;
 }
 
+.cozumel-register{
+    max-height:15em;
+    max-width: 10em;
+}
+
 .grit-item {
   box-shadow: 0 0 70px 10px rgba(226, 230, 0, 0.1);
 }
