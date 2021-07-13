@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
+@model Event[];
 
 <div class="text-center">
     <h1 class="display-4">Cozumel</h1>
@@ -9,22 +10,25 @@
 
 <section>
     <div class="grid-container justify-content-center">
-        <div class="grid-item">
-            <span class="day">Lunes</span>
-            <span class="number">01</span>
+        <div id="0" class="grid-item">
+            
         </div>
-        <div class="grid-item"><span class="day">Martes</span><span class="number">02</span></div>
-        <div class="grid-item"><span class="day">Miercoles</span><span class="number">03</span></div>
-        <div class="grid-item"><span class="day">Jueves</span><span class="number">04</span></div>
-        <div class="grid-item"><span class="day">Viernes</span><span class="number">05</span></div>
-        <div class="grid-item"><span class="day">Sabado</span><span class="number">06</span></div>
-        <div class="grid-item"><span class="day">Domingo</span><span class="number">07</span></div>
-        <div class="grid-item"><span class="day">Lunes</span><span class="number">08</span></div>
-        <div class="grid-item"><span class="day">Martes</span><span class="number">09</span></div>
-        <div class="grid-item"><span class="day">Miercoles</span><span class="number">10</span></div>
-        <div class="grid-item"><span class="day">Jueves</span><span class="number">11</span></div>
-        <div class="grid-item"><span class="day">Viernes</span><span class="number">12</span></div>
-        <div class="grid-item"><span class="day">Sabado</span><span class="number">13</span></div>
-        <div class="grid-item"><span class="day">Domingo</span><span class="number">14</span></div>
+        <div id="1" class="grid-item"></div>
+        <div id="2" class="grid-item"></div>
+        <div id="3" class="grid-item"></div>
+        <div id="4" class="grid-item"></div>
+        <div id="5" class="grid-item"></div>
+        <div id="6" class="grid-item"></div>
+        <div id="7" class="grid-item"></div>
+        <div id="8" class="grid-item"></div>
+        <div id="9" class="grid-item"></div>
+        <div id="10" class="grid-item"></div>
+        <div id="11" class="grid-item"></div>
+        <div id="12" class="grid-item"></div>
+        <div id="13" class="grid-item"></div>
     </div>
 </section>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/appcalendar.js"></script>

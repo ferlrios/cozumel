@@ -185,3 +185,4 @@ C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\ne
 C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Event\Index.cshtml.g.cs

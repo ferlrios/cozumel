@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cozumel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210704204244_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210706204307_InitialCreation")]
+    partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,15 +40,12 @@ namespace Cozumel.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("RelatedUserID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RelatedUserId")
+                    b.Property<string>("RelatedUserID")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("RelatedUserId");
+                    b.HasIndex("RelatedUserID");
 
                     b.ToTable("Events");
                 });
@@ -281,7 +278,7 @@ namespace Cozumel.Migrations
                 {
                     b.HasOne("Cozumel.Models.MyUser", "RelatedUser")
                         .WithMany()
-                        .HasForeignKey("RelatedUserId");
+                        .HasForeignKey("RelatedUserID");
 
                     b.Navigation("RelatedUser");
                 });
