@@ -74,9 +74,11 @@ namespace Cozumel.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
+                int mailFlag = 0;
                 var userName = Input.Email;
                 if (IsValidEmail(Input.Email))
                 {
+                    mailFlag = 1;
                     var user = await _userManager.FindByEmailAsync(Input.Email);
                     if (user != null)
                     {
@@ -88,7 +90,21 @@ namespace Cozumel.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("Bienvenidx.");
                     return LocalRedirect(returnUrl);
-                }}
+                }
+                else
+                {
+                    if (mailFlag == 1)
+                    {
+                        ModelState.AddModelError(string.Empty, "Email y contraseña no coinciden.");
+                        return Page();
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Usuario y contraseña no coinciden.");
+                        return Page();
+                    }
+                }
+            }
             return Page();
         }
 

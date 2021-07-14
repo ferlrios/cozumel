@@ -27,6 +27,7 @@ namespace Cozumel
                     var context = services.GetRequiredService<ApplicationDbContext>();
                     var userManager = services.GetRequiredService<UserManager<MyUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    await ContextSeed.SeedSuperAdminAsync(userManager, roleManager);
                     await ContextSeed.SeedRolesAsync(userManager, roleManager);
                 }
                 catch (Exception ex)
@@ -36,6 +37,7 @@ namespace Cozumel
                 }
             }
             host.Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
