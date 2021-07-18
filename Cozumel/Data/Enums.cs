@@ -14,5 +14,8 @@ namespace Cozumel.Data
             Moderator,
             Basic
         }
+
+
     }
 }
+

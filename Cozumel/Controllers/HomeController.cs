@@ -30,8 +30,61 @@ namespace Cozumel.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var events = _context.Events;
-            return View(await events.ToArrayAsync());
+            //Voy a guardar en today el dia de hoy y en lastday la fecha dentro de 14 días.
+            DateTime lastday;
+            DateTime today = DateTime.Now;
+            if (today.Month == 1 || today.Month == 3 || today.Month == 5 || today.Month == 7 || today.Month == 8 || today.Month == 10 || today.Month == 12)
+            {
+                if (today.Month == 12)
+                {
+                    if (today.Day <= 16)
+                    {
+                        lastday = new DateTime(today.Year, today.Month, (today.Day + 14));
+                    }else
+                    {
+                        lastday = new DateTime(today.Year + 1, 1, (31 - today.Day));
+                    }
+
+                } else
+                {
+                    if (today.Day <= 16)
+                    {
+                        lastday = new DateTime(today.Year, today.Month, (today.Day + 14));
+                    }else
+                    {
+                        lastday = new DateTime(today.Year, today.Month + 1, (31 - today.Day));
+                    }
+                }
+            } else if (today.Month == 4 || today.Month == 6 || today.Month == 9 || today.Month == 11)
+            {
+                if (today.Day <= 15)
+                {
+                    lastday = new DateTime(today.Year, today.Month, (today.Day + 14));
+                } else
+                {
+                    lastday = new DateTime(today.Year, today.Month + 1, (30 - today.Day));
+                }
+
+            } else
+            {
+                if (today.Day <= 13)
+                {
+                    lastday = new DateTime(today.Year, 2, (today.Day + 14));
+                }
+                else
+                {
+                    lastday = new DateTime(today.Year, 3, (28 - today.Day));
+                }
+            }
+
+            int[] daysList = new int[14];
+            for (var i=0; i <=13; i++)
+            {
+                daysList[i] = today.Day + i;
+            }
+            ViewBag.Days = daysList;
+            var events = await (_context.Events.Where(e => (e.Date >= today) && (e.Date <= lastday))).ToListAsync();
+            return View(events);
         }
 
         public IActionResult Privacy()

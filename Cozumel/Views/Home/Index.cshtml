@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-@model Event[];
+@model IEnumerable<Cozumel.Models.Event>
 
 <div class="text-center">
     <h1 class="display-4">Cozumel</h1>
@@ -10,24 +10,210 @@
 
 <section>
     <div class="grid-container justify-content-center">
-        <div id="0" class="grid-item">
-            
+        <div  class="grid-item">
+            <div id="0" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[0])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
         </div>
-        <div id="1" class="grid-item"></div>
-        <div id="2" class="grid-item"></div>
-        <div id="3" class="grid-item"></div>
-        <div id="4" class="grid-item"></div>
-        <div id="5" class="grid-item"></div>
-        <div id="6" class="grid-item"></div>
-        <div id="7" class="grid-item"></div>
-        <div id="8" class="grid-item"></div>
-        <div id="9" class="grid-item"></div>
-        <div id="10" class="grid-item"></div>
-        <div id="11" class="grid-item"></div>
-        <div id="12" class="grid-item"></div>
-        <div id="13" class="grid-item"></div>
+        <div class="grid-item">
+            <div id="1" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[1])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="2" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[2])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div  id="3" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[3])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="4" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[4])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="5" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[5])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="6" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[6])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div  id="7" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[7])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="8" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[8])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="9" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[9])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="10" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[10])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="11" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[11])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="12" class="grid-item-label"></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[12])
+                    {
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="13" ></div>
+            <div>
+                @foreach (var item in Model)
+                {
+                    if (item.Date.Day == @ViewBag.Days[13])
+                    {
+                        
+                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    }
+                }
+            </div>
+        </div>
     </div>
 </section>
+
+<table class="table white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 
 <script src="~/lib/jquery/dist/jquery.js"></script>

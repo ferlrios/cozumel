@@ -15,8 +15,14 @@ namespace Cozumel.Models
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
+
+
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime Date
+        {
+            get; set;
+        }
+
         [Required]
         public string Address { get; set;}
 

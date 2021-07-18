@@ -35,16 +35,18 @@
   background-color: rgb(97, 41, 41);
 }
 
+.grid-item-label{
+    color:white;
+}
+
 .day {
-  padding: 0.4em 0.4em;
-  font-size: 1em;
+  padding-left: 0.5em;
+  font-size: 1.3em;
   color: whitesmoke;
-  float: inline-start;
 }
 .number {
   padding: 0.1em;
-  padding-right: 0.25em;
-  float: inline-end;
+  padding-left: 1em;
   font-size: 2em;
   color: rgb(255, 255, 255);
 }
@@ -71,4 +73,26 @@
 
 .tomato{
     color:tomato;
+}
+
+.white {
+    color: white;
+}
+
+.event-title{
+    font-weight:400;
+    padding-top: 0.2em;
+    padding-left: 0.5em;
+    color:sandybrown;
+}
+
+
+/* Expandimos el espacio de los links del navbar para pantallas medianas */
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 12vw);
+        grid-template-rows: repeat(3, 12em);
+        gap: 1em;
+    }
 }

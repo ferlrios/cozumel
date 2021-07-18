@@ -33,7 +33,7 @@ namespace Cozumel
                 catch (Exception ex)
                 {
                     var logger = loggerFactory.CreateLogger<Program>();
-                    logger.LogError(ex, "An error occurred seeding the DB.");
+                    logger.LogError(ex, "Ocurrió un error con la semilla de la BD.");
                 }
             }
             host.Run();
