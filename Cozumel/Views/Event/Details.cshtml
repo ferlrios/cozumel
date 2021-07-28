@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Cozumel.Models
+@model Cozumel.Models.Event
+@inject SignInManager<MyUser> SignInManager
+
+<h1 class="text-center">@Html.DisplayFor(model => Model.Title)</h1>
+
+<h3>@Html.DisplayFor(model => Model.Date.Date)</h3>
+<h3>Dirección: @Html.DisplayFor(model => Model.Address)</h3>
+@if (Model.Price > 0)
+{
+    <h3>Precio: $@Html.DisplayFor(model => Model.Price)</h3>
+}
+else if (Model.Price < 0)
+{
+    <h3>Precio: A la gorra</h3>
+}
+else
+{
+    <h3>Precio: Gratuito</h3>
+}
+
+<p>@Html.DisplayFor(model => Model.Description)</p>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <a asp-action="Report" asp-route-id="@Model.ID">Reportar evento</a>
+}

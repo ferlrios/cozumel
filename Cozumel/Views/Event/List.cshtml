@@ -5,7 +5,7 @@
 }
 
 <h1>Listado de eventos</h1>
-
+<a class="float-end" asp-action="DeletePast">Eliminar todos los eventos pasados</a>
 <table class="table white">
     <thead>
         <tr>
@@ -34,7 +34,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Address)
                 </td>
+                <td><a asp-action="Delete" asp-route-id="@item.ID">Borrar</a></td>
             </tr>
         }
+        
     </tbody>
 </table>

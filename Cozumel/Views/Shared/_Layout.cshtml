@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using Cozumel.Models
 @inject SignInManager<MyUser> SignInManager
+@inject UserManager<MyUser> UserManager
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/home.css" />
+    <script src="https://kit.fontawesome.com/8d0024a75e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,15 +32,22 @@
                         </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
-                            <li class="nav-item">
-                                <a class="nav-link nav-bar-item" asp-area="" asp-controller="Event"
-                                   asp-action="Index">Crear un evento</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-bar-item" asp-area="" asp-controller="Event"
-                                   asp-action="List">Lista de eventos</a>
-                            </li>
+                            @if (UserManager.GetRolesAsync(UserManager.GetUserAsync(User).Result).Result.Where(r => r == "Moderator").FirstOrDefault() != null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link nav-bar-item" asp-area="" asp-controller="Event"
+                                       asp-action="Index">Crear un evento</a>
+                                </li>
+                            }
+                            @if (UserManager.GetRolesAsync(UserManager.GetUserAsync(User).Result).Result.Where(r => r == "Admin").FirstOrDefault() != null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link nav-bar-item" asp-area="" asp-controller="Event"
+                                       asp-action="List">Lista de eventos</a>
+                                </li>
+                            }
                         }
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -54,6 +63,10 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - Cozumel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @if (SignInManager.IsSignedIn(User)){
+            <a class="align-content-end" asp-action="MessageToAdmin">Contactar administrador</a>        
+            }
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

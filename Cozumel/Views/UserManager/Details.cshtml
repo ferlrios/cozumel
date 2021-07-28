@@ -1,0 +1,38 @@
+﻿@using Cozumel.Models
+@model MyUser
+
+<div class="row">
+    <div class="col-md-4 col-12">
+        @if (Model.ProfileImg != null)
+        {
+            <img id="profilePicture" style="width:350px;height:350px; object-fit:cover; border-radius:10px" src="data:image/*;base64,@(Convert.ToBase64String(Model.ProfileImg))">
+        }
+        else
+        {
+            <img id="profilePicture" style="width:350px;height:350px; object-fit:cover" src="~/img/profileDefault.jpg">
+        }
+    </div>
+    <div class="col-md-8 col-12">
+        <h1>@Model.UserName
+        @if (Model.EmailConfirmed == true) {<p style="color:cadetblue; font-style:italic; font-size:20px">Cuenta verificada</p>}
+        </h1>
+        @if (Model.InstagramURL != null)
+        {
+            <h3>@Model.InstagramURL</h3>
+        }
+        @if (Model.SpotifyURL != null)
+        {
+            <h3>@Model.SpotifyURL</h3>
+        }
+        @if (Model.YoutubeURL != null)
+        {
+            <h3>@Model.YoutubeURL</h3>
+        }
+        <p>@Model.Description</p>
+    </div>
+</div>
+<hr />
+
+
+<br />
+<a asp-controller="Home" asp-action="Index">Volver a home</a>

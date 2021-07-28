@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Cozumel.Models
+@inject SignInManager<MyUser> SignInManager
+
+    <h2>Solicitar verificación al moderador</h2>
+    <hr />
+    <h4>Comentanos en breve texto un poco sobre vos: </h4>
+<br />
+    <h6>Con toda esta información verificamos tu identidad y de estar todo correcto verificamos tu cuenta :)</h6>
+    <form asp-action="ApplyForVerification" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label name="Message"></label>
+            <input name="Message" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+    </form>

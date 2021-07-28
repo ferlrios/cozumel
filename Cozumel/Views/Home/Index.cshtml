@@ -1,6 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Home";
-}
+﻿ 
+    @{ViewData["Title"] = "Home";
+    int[] e = new int[14];
+    int month = 0;
+    int weekday = 0;
+   int _switch = 2; }
+
 @model IEnumerable<Cozumel.Models.Event>
 
 <div class="text-center">
@@ -10,211 +14,109 @@
 
 <section>
     <div class="grid-container justify-content-center">
-        <div  class="grid-item">
-            <div id="0" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[0])
+        @for (var i = 0; i <= 13; i++)
+        {
+            //Ajusta la variable month al valor correspondiendte si sobrepasan los dias totales del mes
+            if (ViewBag.Days[i] < ViewBag.Days[0])
+            {
+                month = ViewBag.Month + 1;
+            }
+            else
+            {
+                month = ViewBag.Month;
+            }
+            //Ajusta la varibale weekday si el dia llega a 8
+            if ((ViewBag.DayName + i) < 6)
+            {
+                weekday = ViewBag.DayName + i;
+            }
+            else
+            {
+                int x = ViewBag.DayName + i;
+                while((x) > 6)
                     {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                    x = x - 7;
                     }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="1" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[1])
+                weekday = x;
+            }
+            <div class="grid-item">
+                <div id="@i" class="grid-item-label">
+                    <span class="day"><a asp-controller="Event" asp-action="Day" asp-route-day="@ViewBag.Days[i]" asp-route-month="@month">@ViewBag.Week[weekday]</a></span>
+                    <span class="number">@ViewBag.Days[i]</span>
+                </div>
+                <div>
+                    @foreach (var item in Model)
                     {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                        if (item.Date.Day == @ViewBag.Days[i])
+                        {
+                            if (e[i] > 1)
+                            {
+                                e[i]++;
+                            }
+                            else
+                            {
+                                <a asp-controller="Event" asp-action="Details" asp-route-id="@item.ID"><p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p></a>
+                                e[i]++;
+                            }
+                        }
                     }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="2" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[2])
+                    @if (e[i] > 2)
                     {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
+                        <a asp-controller="Event" asp-action="Day" asp-route-day="@ViewBag.Days[i]" asp-route-month="@month"><p class="event-title">• @(e[i]-2) más...</p></a>
                     }
-                }
+                </div>
             </div>
-        </div>
-        <div class="grid-item">
-            <div  id="3" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[3])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="4" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[4])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="5" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[5])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="6" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[6])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div  id="7" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[7])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="8" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[8])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="9" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[9])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="10" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[10])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="11" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[11])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="12" class="grid-item-label"></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[12])
-                    {
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
-        <div class="grid-item">
-            <div id="13" ></div>
-            <div>
-                @foreach (var item in Model)
-                {
-                    if (item.Date.Day == @ViewBag.Days[13])
-                    {
-                        
-                <p class="event-title">• @Html.DisplayFor(modelItem => item.Title)</p>
-                    }
-                }
-            </div>
-        </div>
+        }
     </div>
 </section>
 
-<table class="table white">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+<section class="mt-5">
+    <h2 class="my-3">HOY</h2>
+    <hr />
+    @foreach (var item in Model)
+    {
+        if (item.Date.Day == @ViewBag.Days[0] && (_switch == 0 || _switch == 2))
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+            <div class="row mb-2">
+                <div class="col-md-4 col-12 background-red">
+                    <a asp-controller="Event" asp-action="Details" asp-route-id="@item.ID"><h5>@item.Title</h5></a>
+                    <h6>@item.Address</h6>
+                </div>
+                <div class="col-md-4 col-12 background-red">
+                    <p>@item.Description</p>
+                </div>
+                <div class="col-md-4 col-12 background-red">
+                    <h7>Organiza: <a asp-action="Details" asp-controller="UserManager" asp-route-UserId="@item.RelatedUser.Id"> @item.RelatedUser.UserName</a></h7>
+                </div>
+            </div>
+            _switch = 1;
 
+        }
+        else
+        {
+            if (item.Date.Day == @ViewBag.Days[0] && _switch == 1)
+            {
+                <div class="row mb-2">
+                    <div class="col-md-4 col-12 background-brown">
+                        <a asp-controller="Event" asp-action="Details" asp-route-id="@item.ID"><h5>@item.Title</h5></a>
+                        <h6>@item.Address</h6>
+                    </div>
+                    <div class="col-md-4 col-12 background-brown">
+                        <p>@item.Description</p>
+                    </div>
+                    <div class="col-md-4 col-12 background-brown">
+                        <h7>Organiza: <a asp-action="Details" asp-controller="UserManager" asp-route-UserId="@item.RelatedUser.Id"> @item.RelatedUser.UserName</a></h7>
+                    </div>
+                </div>
+                _switch = 0;
+            }
+        }
+    }
+    @if (_switch == 2)
+    {
+        <h4>No hay eventos registrados para el día de hoy...</h4>
+    }
+</section>
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/appcalendar.js"></script>
+

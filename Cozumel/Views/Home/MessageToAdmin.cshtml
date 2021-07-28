@@ -1,0 +1,11 @@
+﻿<h2>Enviale un mensaje al moderador</h2>
+<hr />
+<h4>Expresate con nosotros. ¿En qué podemos ayudarte?: </h4>
+<form asp-action="ContactAdmin" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label name="Message"></label>
+        <input name="Message" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+</form>

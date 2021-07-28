@@ -15644,6 +15644,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\RoleManager\\Index.cshtml",
+      "TargetPath": "Views\\RoleManager\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
       "FileKind": "mvc"
@@ -15744,6 +15749,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\UserManager\\Index.cshtml",
+      "TargetPath": "Views\\UserManager\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "FileKind": "mvc"
@@ -15764,6 +15774,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Event\\Details.cshtml",
+      "TargetPath": "Views\\Event\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\UserRoles\\Index.cshtml",
+      "TargetPath": "Views\\UserRoles\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -15779,8 +15799,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Home\\RegisterChoice.cshtml",
+      "TargetPath": "Views\\Home\\RegisterChoice.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Verification\\Index.cshtml",
+      "TargetPath": "Views\\Verification\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Event\\Day.cshtml",
+      "TargetPath": "Views\\Event\\Day.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Home\\AdminContacted.cshtml",
+      "TargetPath": "Views\\Home\\AdminContacted.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15789,8 +15829,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\UserRoles\\Manage.cshtml",
+      "TargetPath": "Views\\UserRoles\\Manage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Event\\Report.cshtml",
+      "TargetPath": "Views\\Event\\Report.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15804,8 +15859,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Home\\MessageToAdmin.cshtml",
+      "TargetPath": "Views\\Home\\MessageToAdmin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\Event\\Index.cshtml",
       "TargetPath": "Views\\Event\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\EFRA\\Documents\\Cozumel\\Web Cozumel\\CozumelSolucion\\Cozumel\\Views\\UserManager\\Details.cshtml",
+      "TargetPath": "Views\\UserManager\\Details.cshtml",
       "FileKind": "mvc"
     },
     {

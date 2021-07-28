@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Cozumel.Data;
 using Cozumel.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -41,6 +42,8 @@ namespace Cozumel.Areas.Identity.Pages.Account
         public InputModel Input { get; set; }
 
         public string ReturnUrl { get; set; }
+
+        public string Role { get; set; }
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
@@ -80,31 +83,42 @@ namespace Cozumel.Areas.Identity.Pages.Account
             public string SpotifyURL { get; set; }
 
 
-            [Required]
-            [Display(Name = "Danos una descripción tuya:")]
-            public string Description { get; set; }
-
-
         }
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync(string returnUrl = null, string role = null)
         {
+            Role = role;
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null, string role = null)
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new MyUser { UserName = Input.Username, Email = Input.Email, Description = Input.Description, InstagramURL = Input.InstagramURL, SpotifyURL= Input.SpotifyURL, YoutubeURL=Input.YoutubeURL } ;
+                MyUser user=null;
+                if (role == "1")
+                {
+                    user = new MyUser { UserName = Input.Username, Email = Input.Email};
+                }
+                if (role == "2")
+                {
+                    user = new MyUser { UserName = Input.Username, Email = Input.Email, InstagramURL = Input.InstagramURL, SpotifyURL = Input.SpotifyURL, YoutubeURL = Input.YoutubeURL };
+                }
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("Usuario creado.");
-
+                    if (role == "1")
+                    {
+                        await _userManager.AddToRoleAsync(user, Enums.Roles.Basic.ToString());
+                    }
+                    else if (role == "2")
+                    {
+                        await _userManager.AddToRoleAsync(user, Enums.Roles.Moderator.ToString());
+                    }
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

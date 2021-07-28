@@ -18,8 +18,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-                Hola
-                @User.Identity.Name!
+                @User.Identity.Name
             </a>
         </li>
         <li class="nav-item">
@@ -32,7 +31,7 @@
     else
     {
         <li class="nav-item">
-            <a class="nav-links nav-bar-item" asp-area="Identity" asp-page="/Account/Register">Registrarme</a>
+            <a class="nav-links nav-bar-item" asp-controller="Home" asp-action="RegisterChoice">Registrarme</a>
         </li>
         <li class="nav-item">
             <a class="nav-links nav-bar-item" asp-area="Identity" asp-page="/Account/Login">Ingresar</a>

@@ -1,7 +1,21 @@
 ﻿body {
-  background-color: rgb(8, 0, 31);
-  color: whitesmoke;
+    background: rgb(8, 0, 31); /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(0,0,20), rgb(8, 0, 31)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(0,0,20), rgb(8, 0, 31)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: whitesmoke;
 }
+
+a{
+   text-decoration:none;
+   color:white;
+   transition:0.7s;
+}
+
+    a:hover {
+       text-shadow: 0.5px 0.5px black;
+       transition:0.5s;   
+    }
 
 .navegation-bar {
   background-color: black;
@@ -56,6 +70,23 @@
   font-weight: 500;
 }
 
+.custom-file-upload {
+    display: inline-block;
+    justify-content:center;
+    justify-self:center;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+.background-red {
+    background-color: rgb(129, 29, 29);
+}
+.background-brown {
+    background-color: rgb(97, 41, 41);
+}
 /* .................. */
 
 .nav-links {
@@ -66,6 +97,15 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
 }
+
+.manage-nav-link {
+    transition:0.5s;
+}
+
+    .manage-nav-link:hover {
+        color: white;
+        transition: 0.5s;
+    }
 
 .button-small {
     width: 40%;
@@ -84,8 +124,22 @@
     padding-top: 0.2em;
     padding-left: 0.5em;
     color:sandybrown;
+    transition:0.7s;
 }
 
+    .event-title:hover {
+        color: Highlight;
+        transition: 0.5s;
+    }
+
+.container-img-register {
+    width:20em;
+}
+
+.container-img-register img{
+    width: 100%;
+    height: 100%;
+}
 
 /* Expandimos el espacio de los links del navbar para pantallas medianas */
 @media screen and (max-width: 1024px) {

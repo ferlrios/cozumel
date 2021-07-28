@@ -28,10 +28,11 @@
                 <label asp-for="Price" class="control-label"></label>
                 <div class="input-group">
                     <div class="input-group-text">$</div>
-                    <input type="number" class="form-control" asp-for="Price" placeholder="200">
+                    <input type="number" class="form-control" asp-for="Price" placeholder="0" value="0">
                 </div>
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+            <input type="checkbox" name="gorra" value="1" /><label>¿Tu evento es a la gorra?</label>
             <div class="form-group">
                 <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>

@@ -187,3 +187,16 @@ C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\ne
 C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Event\Index.cshtml.g.cs
 C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Event\List.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\RoleManager\Index.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\UserRoles\Index.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\UserRoles\Manage.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Home\RegisterChoice.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Event\Details.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Verification\Index.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Home\MessageToAdmin.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\UserManager\Index.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Event\Report.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Home\AdminContacted.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\Event\Day.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Views\UserManager\Details.cshtml.g.cs
+C:\Users\EFRA\Documents\Cozumel\Web Cozumel\CozumelSolucion\Cozumel\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
